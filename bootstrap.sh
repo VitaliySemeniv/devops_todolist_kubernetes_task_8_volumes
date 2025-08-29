@@ -7,7 +7,7 @@ echo ">> Ensure namespace"
 kubectl create namespace "$NS" 2>/dev/null || true
 
 echo ">> Apply ConfigMap & Secret"
-kubectl -n "$NS" apply -f .infrastructure/confgiMap.yml
+kubectl -n "$NS" apply -f .infrastructure/configMap.yml
 kubectl -n "$NS" apply -f .infrastructure/secret.yml
 
 echo ">> Apply PV/PVC"
